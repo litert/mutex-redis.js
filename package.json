@@ -1,0 +1,40 @@
+{
+  "name": "@litert/mutex-redis",
+  "version": "0.1.0",
+  "description": "The redis driver for mutex.js.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "prepare": "npm run rebuild",
+    "build": "tsc -p tsconfig.json",
+    "rebuild": "npm run clean && npm run lint && npm run build",
+    "test": "echo See directory sources/samples",
+    "clean": "rm -rf lib",
+    "lint": "tslint -p . -c tslint.json"
+  },
+  "keywords": [
+    "litert",
+    "lrt",
+    "mutex",
+    "redis"
+  ],
+  "author": "Angus.Fenying <fenying@litert.org> (https://fenying.net)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litert/mutex-redis.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/litert/mutex-redis.js/issues"
+  },
+  "homepage": "https://github.com/litert/mutex-redis.js#readme",
+  "types": "./lib/index.d.ts",
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^10.7.1",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@litert/mutex": "^0.2.0",
+    "@litert/redis": "^0.1.7"
+  }
+}
