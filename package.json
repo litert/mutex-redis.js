@@ -1,15 +1,17 @@
 {
   "name": "@litert/mutex-redis",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The redis driver for mutex.js.",
   "main": "./lib/index.js",
   "scripts": {
-    "prepare": "npm run rebuild",
-    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run rebuild",
+    "build": "tsc -v && tsc -p .",
     "rebuild": "npm run clean && npm run lint && npm run build",
-    "test": "echo See directory sources/samples",
-    "clean": "rm -rf lib",
-    "lint": "tslint -p . -c tslint.json"
+    "build-watch": "tsc -v && tsc -w -p .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "mocha",
+    "clean": "rm -rf lib examples benchmarks test",
+    "lint": "eslint --ext ts ./src"
   },
   "keywords": [
     "litert",
@@ -30,11 +32,23 @@
   "types": "./lib/index.d.ts",
   "typings": "./lib/index.d.ts",
   "devDependencies": {
-    "@types/node": "^10.7.1",
-    "typescript": "^2.9.2"
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/node": "^14.14.14",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0",
+    "husky": "^4.3.6",
+    "typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint && npm run typecheck"
+    }
   },
   "dependencies": {
-    "@litert/mutex": "^0.2.0",
-    "@litert/redis": "^0.1.7"
+    "@litert/mutex": "^0.2.1",
+    "@litert/redis": "^1.2.2"
   }
 }

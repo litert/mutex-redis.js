@@ -7,27 +7,21 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "[LiteRT/Mutex.js] Sample-01",
-            "program": "${workspaceFolder}/src/samples/sample-01.ts",
+            "name": "[LiteRT/Mutex.js] Example 01",
+            "program": "${workspaceFolder}/src/examples/example-01.ts",
             "sourceMaps": true,
             "outFiles": [
-                "${workspaceFolder}/lib/*.js",
-                "${workspaceFolder}/lib/**/*.js",
-                "${workspaceFolder}/samples/*.js",
-                "${workspaceFolder}/samples/**/*.js"
+                "${workspaceFolder}/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
-            "name": "[LiteRT/Mutex.js] Sample-02",
-            "program": "${workspaceFolder}/src/samples/sample-02.ts",
+            "name": "[LiteRT/Mutex.js] Example 02",
+            "program": "${workspaceFolder}/src/examples/example-02.ts",
             "sourceMaps": true,
             "outFiles": [
-                "${workspaceFolder}/lib/*.js",
-                "${workspaceFolder}/lib/**/*.js",
-                "${workspaceFolder}/samples/*.js",
-                "${workspaceFolder}/samples/**/*.js"
+                "${workspaceFolder}/**/*.js"
             ]
         }
     ]

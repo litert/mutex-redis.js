@@ -4,7 +4,7 @@
 
 ```ts
 function createRedisDriver(
-    redis: Redis.RedisClient,
+    redis: Redis.ICommandClient,
     namespace: string = DEFAULT_NAMESPACE,
     keyBuilder: IKeyBuilder = DEFAULT_KEY_BUILDER
 ): Mutex.IDriver;
@@ -12,7 +12,7 @@ function createRedisDriver(
 
 ## 参数说明
 
-### - `redis: Redis.RedisClient`
+### - `redis: Redis.ICommandClient`
 
 该参数用于提供一个可用的 Redis 客户端对象，用于连接 Redis 服务器。
 

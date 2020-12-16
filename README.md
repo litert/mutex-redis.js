@@ -9,7 +9,7 @@ The redis driver for mutex.js.
 
 ## Requirement
 
-- TypeScript v2.9.2 (or newer)
+- TypeScript v4.0.0 (or newer)
 
 ## Installation
 

@@ -4,5 +4,10 @@
 /.npmignore
 /tslint.json
 /tsconfig.json
+/docs/
 /node_modules/
-/dist/samples/
+/examples/
+/src/examples/
+/commitlint.config.js
+/.eslintrc
+/.eslintignore
